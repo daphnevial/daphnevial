@@ -1,0 +1,13 @@
+<section id="experiencia" class="seccion">
+  <h2 class="titulo">Experiencia</h2>
+  <div class="bento cols-3">
+    {% for e in experiencia %}
+    <div class="card exp{% if e.destacada %} card-oscuro{% endif %}">
+      <span class="exp-periodo">{{ e.periodo }}</span>
+      <span class="exp-cargo">{{ e.cargo }}</span>
+      <span class="exp-empresa">{{ e.empresa }}</span>
+      <p class="exp-detalle">{{ e.detalle }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

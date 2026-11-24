@@ -1,0 +1,36 @@
+<section id="caso" class="seccion">
+  <span class="kicker rojo-oscuro">Caso de estudio</span>
+  <h2 class="titulo-caso">{{ caso.nombre }}</h2>
+  <div class="bento cols-4">
+    <div class="card span-2 pad-36">
+      <span class="paso-label rojo">01 · Contexto y problema</span>
+      <p class="texto-medio">{{ caso.contexto }}</p>
+    </div>
+    <div class="card card-oscuro span-2 pad-36">
+      <span class="paso-label celeste">02 · Objetivo</span>
+      <p class="frase">{{ caso.objetivo }}</p>
+    </div>
+    <div class="card span-4 pad-36">
+      <span class="paso-label rojo">03 · Metodologías</span>
+      <div class="chips">
+        {% for m in caso.metodologias %}<span class="chip-suave">{{ m }}</span>{% endfor %}
+      </div>
+    </div>
+    {% for p in caso.proceso %}
+    <div class="card paso">
+      <span class="paso-num">{{ loop.index }}</span>
+      <span class="paso-nombre">{{ p.paso }}</span>
+      <span class="paso-detalle">{{ p.detalle }}</span>
+    </div>
+    {% endfor %}
+    <div class="card card-turquesa span-3 pad-36 solucion">
+      <span class="paso-label profundo">05 · Solución</span>
+      <div class="imagen imagen-grande">{% if caso.solucionImagen %}<img src="{{ caso.solucionImagen }}" alt="Pantallas finales de la solución">{% else %}[Pantallas finales]{% endif %}</div>
+    </div>
+    <div class="card card-rojo pad-36 resultado">
+      <span class="label">Resultado</span>
+      <span class="resultado-num">{{ caso.resultado }}</span>
+      <span>{{ caso.resultadoDetalle }}</span>
+    </div>
+  </div>
+</section>

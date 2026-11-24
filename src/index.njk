@@ -1,23 +1,10 @@
 ---
 layout: base.njk
 ---
-<section class="hero">
-  <p class="eyebrow">{{ site.role }}</p>
-  <h1>Hola, soy Daphne 👋</h1>
-  <p class="lead">Me interesan la investigación y la arquitectura de la información. Hoy sigo aprendiendo UX y busco colaborar en proyectos donde entender a las personas sea el punto de partida.</p>
-  <p><a class="btn" href="/proyectos/">Ver proyectos</a> <a class="btn btn-ghost" href="{{ site.linkedin }}">LinkedIn</a></p>
-</section>
-
-<section>
-  <h2>Qué hago</h2>
-  <div class="grid">
-    <article class="card"><h3>🔎 Investigación</h3><p>Entrevistas, encuestas y pruebas de usabilidad para descubrir necesidades reales.</p></article>
-    <article class="card"><h3>🗂️ Arquitectura de la información</h3><p>Estructuras, taxonomías y navegación que hacen que el contenido sea fácil de encontrar.</p></article>
-    <article class="card"><h3>✏️ Diseño UX</h3><p>Flujos, wireframes y prototipos para probar ideas rápido.</p></article>
-  </div>
-</section>
-
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>¿Quieres colaborar en un proyecto de UX? Escríbeme por <a href="{{ site.linkedin }}">LinkedIn</a>.</p>
-</section>
+{% include "secciones/nav.njk" %}
+{% include "secciones/inicio.njk" %}
+{% include "secciones/sobre-mi.njk" %}
+{% include "secciones/experiencia.njk" %}
+{% include "secciones/proyectos.njk" %}
+{% include "secciones/caso.njk" %}
+{% include "secciones/contacto.njk" %}

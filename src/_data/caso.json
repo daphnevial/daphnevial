@@ -1,0 +1,15 @@
+{
+  "nombre": "[Nombre del proyecto 1]",
+  "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
+  "objetivo": "[Qué buscaba lograr el proyecto, idealmente medible.]",
+  "metodologias": ["Entrevistas", "Benchmark", "Journey map", "Card sorting", "Wireframes", "Test de usabilidad"],
+  "proceso": [
+    { "paso": "Descubrir", "detalle": "[Qué investigaste.]" },
+    { "paso": "Definir", "detalle": "[Hallazgos e insights.]" },
+    { "paso": "Idear", "detalle": "[Propuestas y prototipos.]" },
+    { "paso": "Validar", "detalle": "[Pruebas e iteraciones.]" }
+  ],
+  "solucionImagen": "",
+  "resultado": "[+X%]",
+  "resultadoDetalle": "[Qué mejoró.]"
+}

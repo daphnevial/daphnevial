@@ -1,0 +1,22 @@
+<section id="inicio" class="bento cols-4">
+  <div class="card hero span-4">
+    <span class="badge">{{ site.rol }}</span>
+    <h1 class="big">Diseño experiencias claras, útiles y con <span class="rojo">intención</span>.</h1>
+    <p class="hero-texto">Hola, soy Daphne. Uno la investigación con usuarios y el oficio visual que traigo del diseño gráfico, el motion y el marketing.</p>
+  </div>
+  <div class="card card-rojo stat">
+    <span class="label">Experiencia en UX/UI</span>
+    <span class="stat-num">{{ site.aniosUX }}</span>
+  </div>
+  <div class="card stat">
+    <span class="label muted">Última experiencia</span>
+    <span class="stat-empresa">{{ site.ultimaExperiencia.empresa }}</span>
+    <span class="muted">{{ site.ultimaExperiencia.periodo }}</span>
+  </div>
+  <div class="card card-oscuro stat span-2">
+    <span class="label celeste">Lo que hago</span>
+    <div class="chips">
+      {% for item in site.loQueHago %}<span class="chip-borde">{{ item }}</span>{% endfor %}
+    </div>
+  </div>
+</section>

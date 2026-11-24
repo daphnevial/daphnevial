@@ -1,17 +1,5 @@
 [
-  {
-    "titulo": "Reorganización de un sitio de contenidos",
-    "tipo": "Arquitectura de la información",
-    "resumen": "Card sorting y tree testing para rediseñar la navegación y reducir el tiempo para encontrar información."
-  },
-  {
-    "titulo": "Entrevistas con usuarios",
-    "tipo": "Investigación",
-    "resumen": "Plan de investigación, guion de entrevistas y síntesis en un mapa de afinidad con hallazgos accionables."
-  },
-  {
-    "titulo": "Prototipo de flujo de registro",
-    "tipo": "Diseño UX",
-    "resumen": "Wireframes y prototipo navegable validado con pruebas de usabilidad moderadas."
-  }
+  { "nombre": "Home APP", "etiqueta": "[Empresa · Año]", "imagen": "", "url": "#caso", "color": "turquesa" },
+  { "nombre": "[Nombre del proyecto 2]", "imagen": "", "url": "#caso", "color": "blanco" },
+  { "nombre": "[Nombre del proyecto 3]", "imagen": "", "url": "#caso", "color": "rojo" }
 ]

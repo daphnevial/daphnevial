@@ -1,0 +1,25 @@
+{%- macro imagen(src, texto, clase) -%}
+<div class="{{ clase }}">{% if src %}<img src="{{ src }}" alt="{{ texto }}">{% else %}[Imagen]{% endif %}</div>
+{%- endmacro -%}
+<section id="proyectos" class="seccion">
+  <div class="seccion-cabecera">
+    <h2 class="titulo">Proyectos</h2>
+    <span class="muted">Más casos</span>
+  </div>
+  <div class="bento cols-3">
+    {% for p in proyectos %}
+      {% if loop.first %}
+      <a href="{{ p.url }}" class="card proyecto-principal card-{{ p.color }} span-2 row-2">
+        <span class="badge badge-blanco">{{ p.etiqueta }}</span>
+        <div class="imagen imagen-grande">{% if p.imagen %}<img src="{{ p.imagen }}" alt="{{ p.nombre }}">{% else %}[Imagen del proyecto]{% endif %}</div>
+        <span class="proyecto-nombre-grande">{{ p.nombre }} →</span>
+      </a>
+      {% else %}
+      <a href="{{ p.url }}" class="card proyecto card-{{ p.color }}">
+        {{ imagen(p.imagen, p.nombre, "imagen imagen-chica") }}
+        <span class="proyecto-nombre">{{ p.nombre }} →</span>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
