@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Proyectos
+permalink: /proyectos/
+---
+<h1>Proyectos</h1>
+<p class="lead">Una selección de trabajos y ejercicios.</p>
+<div class="grid">
+  {% for p in proyectos %}
+  <article class="card">
+    <p class="eyebrow">{{ p.tipo }}</p>
+    <h2>{{ p.titulo }}</h2>
+    <p>{{ p.resumen }}</p>
+  </article>
+  {% endfor %}
+</div>

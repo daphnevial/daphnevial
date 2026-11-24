@@ -1,0 +1,17 @@
+[
+  {
+    "titulo": "Reorganización de un sitio de contenidos",
+    "tipo": "Arquitectura de la información",
+    "resumen": "Card sorting y tree testing para rediseñar la navegación y reducir el tiempo para encontrar información."
+  },
+  {
+    "titulo": "Entrevistas con usuarios",
+    "tipo": "Investigación",
+    "resumen": "Plan de investigación, guion de entrevistas y síntesis en un mapa de afinidad con hallazgos accionables."
+  },
+  {
+    "titulo": "Prototipo de flujo de registro",
+    "tipo": "Diseño UX",
+    "resumen": "Wireframes y prototipo navegable validado con pruebas de usabilidad moderadas."
+  }
+]

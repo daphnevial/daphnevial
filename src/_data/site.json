@@ -1,0 +1,14 @@
+{
+  "title": "Daphne Vial",
+  "role": "UX · Investigación · Arquitectura de la información",
+  "description": "Portafolio de Daphne Vial: investigación de usuarios, arquitectura de la información y diseño UX.",
+  "lang": "es",
+  "linkedin": "https://www.linkedin.com/in/daphne-vial-825571197/",
+  "github": "https://github.com/daphnevial",
+  "nav": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Sobre mí", "url": "/sobre-mi/" },
+    { "label": "Proyectos", "url": "/proyectos/" },
+    { "label": "Contacto", "url": "/#contacto" }
+  ]
+}
