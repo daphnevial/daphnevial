@@ -5,6 +5,7 @@
   "description": "Sitio personal de Daphne Vial construido con Eleventy",
   "type": "module",
   "scripts": {
+    "dev": "eleventy --serve",
     "start": "eleventy --serve",
     "build": "eleventy"
   },
