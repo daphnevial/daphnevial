@@ -6,10 +6,10 @@
   paso1: "paso1.png",
   paso2: "paso2.png",
   paso3: "paso3.png",
-  flujo: "",
-  borrador: "",
-  designSystem: "",
-  handoff: ""
+  flujo: "flujo.png",
+  borrador: "borrador.png",
+  designSystem: "design-system.png",
+  handoff: "handoff.png"
 } -%}
 {%- macro imagen(archivo, texto, clase="") -%}
 <div class="cs-img {{ clase }}">{% if archivo %}<img src="/img/sia/{{ archivo }}" alt="{{ texto }}" loading="lazy">{% else %}<span>[{{ texto }}]</span>{% endif %}</div>
