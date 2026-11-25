@@ -91,6 +91,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .label { font-size: 15px; font-weight: 500; }
 
 /* Inicio */
+.intro { display: flex; flex-direction: column; gap: 16px; }
+.iteracion { margin: 0; font-size: 13px; color: var(--texto-suave); }
 .hero { padding: 48px; justify-content: space-between; gap: 32px; min-height: 376px; }
 .badge { align-self: flex-start; background: var(--turquesa-palido); color: var(--turquesa-texto); font-weight: 500; font-size: 14px; padding: 8px 14px; border-radius: 999px; }
 .badge-blanco { background: var(--blanco); }
