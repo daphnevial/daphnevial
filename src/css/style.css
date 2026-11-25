@@ -79,6 +79,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .card-oscuro { background: var(--tinta); color: var(--blanco); }
 .card-turquesa { background: var(--turquesa); color: var(--blanco); }
 .card-blanco { background: var(--blanco); color: var(--tinta); }
+.card-verde-claro { background: #3D6B57; color: var(--blanco); }
 .pad-36 { padding: 36px; }
 .pad-40 { padding: 40px; gap: 16px; }
 
