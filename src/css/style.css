@@ -155,6 +155,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .pie-redes { margin: 4px 0 0; font-size: 15px; font-weight: 500; color: var(--texto-suave); }
 .pie-redes a { color: var(--tinta); text-decoration: none; }
 .pie-redes a:hover { color: var(--rojo-oscuro); text-decoration: underline; }
+.pie-columnas { display: flex; flex-wrap: wrap; gap: 24px 64px; }
+.volver { align-self: flex-start; font-size: 15px; font-weight: 500; color: var(--tinta); text-decoration: none; }
+.volver:hover { color: var(--rojo-oscuro); text-decoration: underline; }
+.otros-casos { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .pie-mapa h2 { margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texto-suave); }
 .pie-mapa ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .pie-mapa a { color: var(--tinta); text-decoration: none; font-size: 15px; font-weight: 500; }

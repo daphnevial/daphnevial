@@ -1,0 +1,20 @@
+---
+layout: base.njk
+pagination:
+  data: casos
+  size: 1
+  alias: caso
+permalink: "/casos/{{ caso.slug }}/"
+eleventyComputed:
+  title: "{{ caso.nombre }}"
+---
+{% include "secciones/nav.njk" %}
+{% include "secciones/caso.njk" %}
+{% set anterior = pagination.page.previous %}
+{% set siguiente = pagination.page.next %}
+<nav class="otros-casos" aria-label="Otros casos">
+  {% if anterior %}<a class="pill" href="/casos/{{ anterior.slug }}/">← {{ anterior.nombre }}</a>{% else %}<span></span>{% endif %}
+  {% if siguiente %}<a class="pill" href="/casos/{{ siguiente.slug }}/">{{ siguiente.nombre }} →</a>{% endif %}
+</nav>
+{% include "secciones/contacto.njk" %}
+{% include "secciones/pie.njk" %}

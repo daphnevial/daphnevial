@@ -1,0 +1,116 @@
+[
+  {
+    "slug": "home-app",
+    "nombre": "Home APP",
+    "etiqueta": "[Empresa · Año]",
+    "imagen": "",
+    "color": "turquesa",
+    "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
+    "objetivo": "[Qué buscaba lograr el proyecto, idealmente medible.]",
+    "metodologias": [
+      "Entrevistas",
+      "Benchmark",
+      "Journey map",
+      "Card sorting",
+      "Wireframes",
+      "Test de usabilidad"
+    ],
+    "proceso": [
+      {
+        "paso": "Descubrir",
+        "detalle": "[Qué investigaste.]"
+      },
+      {
+        "paso": "Definir",
+        "detalle": "[Hallazgos e insights.]"
+      },
+      {
+        "paso": "Idear",
+        "detalle": "[Propuestas y prototipos.]"
+      },
+      {
+        "paso": "Validar",
+        "detalle": "[Pruebas e iteraciones.]"
+      }
+    ],
+    "solucionImagen": "",
+    "resultado": "[+X%]",
+    "resultadoDetalle": "[Qué mejoró.]"
+  },
+  {
+    "slug": "proyecto-2",
+    "nombre": "[Nombre del proyecto 2]",
+    "etiqueta": "[Empresa · Año]",
+    "imagen": "",
+    "color": "blanco",
+    "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
+    "objetivo": "[Qué buscaba lograr el proyecto, idealmente medible.]",
+    "metodologias": [
+      "Entrevistas",
+      "Benchmark",
+      "Journey map",
+      "Card sorting",
+      "Wireframes",
+      "Test de usabilidad"
+    ],
+    "proceso": [
+      {
+        "paso": "Descubrir",
+        "detalle": "[Qué investigaste.]"
+      },
+      {
+        "paso": "Definir",
+        "detalle": "[Hallazgos e insights.]"
+      },
+      {
+        "paso": "Idear",
+        "detalle": "[Propuestas y prototipos.]"
+      },
+      {
+        "paso": "Validar",
+        "detalle": "[Pruebas e iteraciones.]"
+      }
+    ],
+    "solucionImagen": "",
+    "resultado": "[+X%]",
+    "resultadoDetalle": "[Qué mejoró.]"
+  },
+  {
+    "slug": "proyecto-3",
+    "nombre": "[Nombre del proyecto 3]",
+    "etiqueta": "[Empresa · Año]",
+    "imagen": "",
+    "color": "rojo",
+    "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
+    "objetivo": "[Qué buscaba lograr el proyecto, idealmente medible.]",
+    "metodologias": [
+      "Entrevistas",
+      "Benchmark",
+      "Journey map",
+      "Card sorting",
+      "Wireframes",
+      "Test de usabilidad"
+    ],
+    "proceso": [
+      {
+        "paso": "Descubrir",
+        "detalle": "[Qué investigaste.]"
+      },
+      {
+        "paso": "Definir",
+        "detalle": "[Hallazgos e insights.]"
+      },
+      {
+        "paso": "Idear",
+        "detalle": "[Propuestas y prototipos.]"
+      },
+      {
+        "paso": "Validar",
+        "detalle": "[Pruebas e iteraciones.]"
+      }
+    ],
+    "solucionImagen": "",
+    "resultado": "[+X%]",
+    "resultadoDetalle": "[Qué mejoró.]"
+  }
+]

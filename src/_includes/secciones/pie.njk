@@ -1,18 +1,25 @@
 <footer class="pie">
   <div class="pie-marca">
-    <a class="logo" href="#inicio">Daphne Vial<span class="rojo">.</span></a>
+    <a class="logo" href="/">Daphne Vial<span class="rojo">.</span></a>
     <p class="iteracion">Iteración: 1.0 diseño asistido con IA</p>
     <p class="pie-redes"><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> · <a href="{{ site.behance }}" target="_blank" rel="noopener">Behance</a></p>
   </div>
-  <nav class="pie-mapa" aria-label="Mapa del sitio">
-    <h2>Mapa del sitio</h2>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#caso">Caso de estudio</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  <div class="pie-columnas">
+    <nav class="pie-mapa" aria-label="Mapa del sitio">
+      <h2>Mapa del sitio</h2>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/#sobre-mi">Sobre mí</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav class="pie-mapa" aria-label="Casos de estudio">
+      <h2>Casos de estudio</h2>
+      <ul>
+        {% for c in casos %}<li><a href="/casos/{{ c.slug }}/">{{ c.nombre }}</a></li>{% endfor %}
+      </ul>
+    </nav>
+  </div>
 </footer>
