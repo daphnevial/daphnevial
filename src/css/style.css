@@ -179,3 +179,130 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .titulo-caso { font-size: 36px; }
   .titulo-contacto { font-size: 38px; }
 }
+
+/* ===== Páginas de caso de estudio ===== */
+.cs { display: flex; flex-direction: column; gap: 96px; }
+.cs-bloque { display: flex; flex-direction: column; gap: 16px; }
+.cs-grid { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+.cs-3-1 { grid-template-columns: 3fr 1fr; }
+.cs-2-1 { grid-template-columns: 2fr 1fr; }
+.cs-1-2 { grid-template-columns: 1fr 2fr; }
+.cs-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cs-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cs-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.cs-pad { padding: 36px; gap: 14px; }
+.cs h3 { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.3; }
+.cs p { margin: 0; }
+
+.cs-h2 { margin: 0 0 8px; font-size: 40px; font-weight: 900; letter-spacing: -0.02em; display: flex; align-items: baseline; gap: 12px; }
+.cs-num { font-size: 18px; font-weight: 700; color: var(--rojo-oscuro); }
+.cs-lead { font-size: 17px; line-height: 1.6; color: var(--texto-suave); max-width: 80ch; margin-bottom: 8px !important; }
+.cs-texto { font-size: 17px; line-height: 1.6; }
+.muted-texto { color: var(--texto-suave); }
+.cs-mini { font-size: 13px; font-weight: 500; opacity: .8; }
+
+/* Portada */
+.cs-hero { padding: 48px; gap: 28px; justify-content: space-between; }
+.cs-titulo { margin: 0; font-size: 56px; line-height: 1.05; font-weight: 900; letter-spacing: -0.03em; }
+.cs-intro { font-size: 18px; line-height: 1.6; color: var(--texto-suave); max-width: 62ch; }
+.cs-ficha { margin: 0; padding: 32px; gap: 6px; }
+.cs-ficha dt { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--celeste); margin-top: 10px; }
+.cs-ficha dt:first-child { margin-top: 0; }
+.cs-ficha dd { margin: 0; font-size: 15px; line-height: 1.5; color: var(--sobre-oscuro); }
+.cs-portada { padding: 20px; }
+
+/* Imágenes (con recuadro mientras no haya archivo) */
+.cs-img { border-radius: 16px; overflow: hidden; background: var(--turquesa-palido); color: var(--turquesa-texto); display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 500; font-size: 15px; padding: 0; aspect-ratio: 16 / 10; }
+.cs-img span { padding: 16px; }
+.cs-img img { width: 100%; height: 100%; object-fit: cover; }
+.cs-img-portada { aspect-ratio: 3 / 1; background: var(--turquesa-claro); color: var(--blanco); font-size: 18px; font-weight: 700; }
+.card-turquesa .cs-img { background: var(--turquesa-claro); color: var(--blanco); }
+
+/* Problema */
+.cs-canales { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 20px 32px; padding: 28px 36px; }
+.cs-canales > div:first-child { display: flex; flex-direction: column; }
+.cs-canales-num { font-size: 44px; font-weight: 900; line-height: 1; color: var(--rojo); }
+.cs-canales-sub { font-size: 14px; color: var(--sobre-oscuro); margin-top: 4px; }
+.cs-objetivo { font-size: 24px; line-height: 1.35; font-weight: 700; }
+
+/* Usuarios */
+.cs-usuario { padding: 28px; gap: 10px; }
+.cs-usuario p { font-size: 14px; line-height: 1.55; color: var(--texto-suave); }
+.card-turquesa.cs-usuario p { color: var(--sobre-oscuro); }
+.cs-etiqueta-mostaza { align-self: flex-start; background: var(--rojo); color: var(--sobre-mostaza); font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; }
+
+/* Mi rol */
+.cs-nota { font-size: 14px; color: var(--sobre-oscuro); }
+.cs-lista { margin: 0; list-style: none; gap: 18px; }
+.cs-lista li { position: relative; padding-left: 28px; font-size: 16px; line-height: 1.55; color: var(--texto-suave); }
+.cs-lista li::before { content: "→"; position: absolute; left: 0; color: var(--rojo-oscuro); font-weight: 700; }
+.cs-lista strong { color: var(--tinta); }
+.cs-paso { padding: 22px; gap: 6px; }
+.cs-paso-nombre { font-size: 18px; font-weight: 700; line-height: 1.25; }
+.cs-paso-detalle { font-size: 14px; line-height: 1.5; color: var(--texto-suave); }
+
+/* Investigación */
+.cs-entrevista { padding: 28px; gap: 6px; }
+.cs-dato { font-size: 36px; font-weight: 900; color: var(--turquesa); line-height: 1.1; }
+.cs-entrevista-area { font-size: 18px; font-weight: 700; line-height: 1.3; }
+.cs-nota-test { flex-direction: row; align-items: center; gap: 28px; padding: 28px 36px; }
+.cs-nota-num { font-size: 52px; font-weight: 900; line-height: 1; flex-shrink: 0; }
+.cs-nota-test p { font-size: 15px; line-height: 1.55; margin-top: 4px; }
+
+/* Hallazgos */
+.cs-hallazgo-num { font-size: 24px; font-weight: 900; color: var(--rojo-oscuro); }
+.card-turquesa .cs-hallazgo-num { color: var(--rojo); }
+.cs-hallazgo p { font-size: 15px; line-height: 1.6; color: var(--texto-suave); }
+.cs-hallazgo blockquote { margin: 0; font-size: 17px; line-height: 1.5; font-style: italic; color: var(--sobre-oscuro); }
+.cs-hallazgo cite { display: block; margin-top: 12px; font-size: 13px; font-style: normal; color: var(--rojo); }
+
+/* Solución */
+.cs-pantalla { margin: 0; padding: 20px; gap: 16px; }
+.cs-pantalla figcaption { display: flex; flex-direction: column; gap: 6px; padding: 0 8px 8px; }
+.cs-pantalla p { font-size: 14px; line-height: 1.5; color: var(--texto-suave); }
+.cs-tabla { width: 100%; border-collapse: collapse; }
+.cs-tabla thead th { text-align: left; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--texto-suave); padding: 0 16px 14px 0; border-bottom: 1px solid #E6E0D3; }
+.cs-tabla tbody th { text-align: left; width: 50%; font-size: 17px; font-weight: 700; padding: 18px 24px 18px 0; vertical-align: top; }
+.cs-tabla td { font-size: 15px; line-height: 1.55; color: var(--texto-suave); padding: 18px 0; vertical-align: top; }
+.cs-tabla tbody tr + tr th, .cs-tabla tbody tr + tr td { border-top: 1px solid #E6E0D3; }
+
+/* Material visual */
+.cs-material { margin: 0; padding: 20px; gap: 14px; }
+.cs-material .cs-img { aspect-ratio: auto; flex-grow: 1; min-height: 240px; }
+.cs-material figcaption { font-size: 17px; font-weight: 700; padding: 0 4px 4px; }
+
+/* Resultados */
+.cs-texto-claro { font-size: 17px; line-height: 1.6; color: var(--sobre-oscuro); }
+.cs-aprendizajes { gap: 22px; }
+.cs-aprendizajes p { font-size: 15px; line-height: 1.55; color: var(--texto-suave); margin-top: 4px; }
+
+/* Navegación al final de cada caso */
+.cs-siguiente { grid-template-columns: 1fr 2fr; }
+.cs-siguiente .card { padding: 28px 32px; gap: 6px; }
+.cs-siguiente .card-turquesa { color: var(--blanco); }
+.cs-siguiente-titulo { font-size: 22px; font-weight: 700; }
+.cs-siguiente .card:hover { transform: translateY(-2px); }
+
+@media (max-width: 1000px) {
+  .cs-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cs-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 820px) {
+  .cs { gap: 72px; }
+  .cs-3-1, .cs-2-1, .cs-1-2, .cs-3, .cs-4 { grid-template-columns: 1fr; }
+  .cs-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-hero { padding: 32px; }
+  .cs-titulo { font-size: 40px; }
+  .cs-h2 { font-size: 32px; }
+  .cs-img-portada { aspect-ratio: 16 / 10; }
+  .cs-nota-test { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .cs-tabla thead { display: none; }
+  .cs-tabla tr { display: block; padding: 14px 0; }
+  .cs-tabla tbody tr + tr { border-top: 1px solid #E6E0D3; }
+  .cs-tabla tbody th, .cs-tabla td { display: block; width: auto; padding: 0; border: 0 !important; }
+  .cs-tabla td { margin-top: 6px; }
+}
+@media (max-width: 480px) {
+  .cs-titulo { font-size: 34px; }
+  .cs-6 { grid-template-columns: 1fr; }
+}

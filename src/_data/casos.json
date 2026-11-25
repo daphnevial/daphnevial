@@ -40,7 +40,7 @@
   {
     "slug": "proyecto-sia",
     "nombre": "Proyecto SIA",
-    "etiqueta": "[Empresa · Año]",
+    "etiqueta": "2025 · Imprenta B2B",
     "imagen": "",
     "color": "blanco",
     "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
@@ -73,7 +73,8 @@
     ],
     "solucionImagen": "",
     "resultado": "[+X%]",
-    "resultadoDetalle": "[Qué mejoró.]"
+    "resultadoDetalle": "[Qué mejoró.]",
+    "plantilla": "sia"
   },
   {
     "slug": "proyecto-3",

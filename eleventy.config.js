@@ -3,6 +3,7 @@ import { HtmlBasePlugin } from "@11ty/eleventy";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 }
 

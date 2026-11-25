@@ -1,0 +1,252 @@
+{#- Caso de estudio: SIA.
+    Imágenes: deja los archivos en src/img/sia/ y escribe el nombre en la lista de abajo.
+    Mientras un nombre esté vacío, se muestra un recuadro con su descripción. -#}
+{%- set img = {
+  portada: "",
+  paso1: "",
+  paso2: "",
+  paso3: "",
+  flujo: "",
+  borrador: "",
+  designSystem: "",
+  handoff: ""
+} -%}
+{%- macro imagen(archivo, texto, clase="") -%}
+<div class="cs-img {{ clase }}">{% if archivo %}<img src="/img/sia/{{ archivo }}" alt="{{ texto }}" loading="lazy">{% else %}<span>[{{ texto }}]</span>{% endif %}</div>
+{%- endmacro -%}
+
+<div class="cs">
+
+  <!-- Portada -->
+  <section class="cs-bloque">
+    <div class="cs-grid cs-3-1">
+      <div class="card cs-hero">
+        <span class="badge">Caso de estudio · {{ caso.etiqueta }}</span>
+        <h1 class="cs-titulo">SIA: cotizar sin <span class="rojo">perderse</span> en la pantalla.</h1>
+        <p class="cs-intro">Rediseño del módulo comercial con que una imprenta de estuches cotiza y genera órdenes de producción: de una pantalla saturada a un flujo guiado de 3 pasos, basado en entrevistas con 4 áreas de la empresa.</p>
+      </div>
+      <dl class="card card-oscuro cs-ficha">
+        <dt>Rol</dt><dd>Diseñadora UX/UI</dd>
+        <dt>Alcance</dt><dd>MVP de 4 meses · cerca de 21 pantallas</dd>
+        <dt>Usuarios</dt><dd>Comercial, desarrollo, producción y planificación</dd>
+      </dl>
+    </div>
+    <div class="card card-turquesa cs-portada">
+      {{ imagen(img.portada, "Pantallas del nuevo módulo comercial de SIA", "cs-img-portada") }}
+    </div>
+  </section>
+
+  <!-- 01 El problema -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">01</span>El problema</h2>
+    <div class="cs-grid cs-2-1">
+      <div class="card cs-pad">
+        <p class="cs-texto">SIA tenía un diseño antiguo y desactualizado que mostraba toda la información de una vez en la pantalla principal. Crear una cotización significaba buscar campos entre decenas de opciones y cruzar datos a mano: una carga cognitiva alta para el área comercial.</p>
+        <p class="cs-texto muted-texto">Las entrevistas mostraron que el problema iba más allá de la pantalla.</p>
+      </div>
+      <div class="card card-turquesa cs-pad">
+        <span class="kicker celeste">El hallazgo central</span>
+        <p class="frase">El pedido avanza, pero la información no viaja con él.</p>
+      </div>
+    </div>
+    <div class="card card-oscuro cs-canales">
+      <div>
+        <span class="cs-canales-num">7 canales</span>
+        <span class="cs-canales-sub">por los que pasa cada pedido</span>
+      </div>
+      <div class="chips">
+        {% for c in ["SIA", "SAP", "Excel", "Correo", "WhatsApp", "Teléfono", "Papel"] %}<span class="chip-borde">{{ c }}</span>{% endfor %}
+      </div>
+    </div>
+    <div class="card card-rojo cs-pad">
+      <span class="kicker">Objetivo</span>
+      <p class="cs-objetivo">Que crear una cotización sea un proceso guiado y claro, que reduzca la carga cognitiva y los errores que hoy llegan hasta producción.</p>
+    </div>
+  </section>
+
+  <!-- 02 Los usuarios -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">02</span>Los usuarios</h2>
+    <p class="cs-lead">SIA lo usan varias áreas de la imprenta, y cada una toca el pedido en un momento distinto. El MVP se enfocó en el área comercial, pero diseñé pensando en todas.</p>
+    <div class="cs-grid cs-4">
+      <div class="card card-turquesa cs-usuario">
+        <span class="cs-etiqueta-mostaza">Usuario principal del MVP</span>
+        <h3>Área comercial</h3>
+        <p>Crea las cotizaciones, casi siempre replicando una anterior; revisa los datos del cliente y sigue el avance de sus pedidos.</p>
+      </div>
+      <div class="card cs-usuario">
+        <h3>Desarrollo</h3>
+        <p>Completa la “receta” técnica de cada producto (materiales, máquina, barniz) y costea las cotizaciones.</p>
+      </div>
+      <div class="card cs-usuario">
+        <h3>Producción y planta</h3>
+        <p>Fabrica a partir de la orden de producción, que muchas veces trabaja impresa en papel.</p>
+      </div>
+      <div class="card cs-usuario">
+        <h3>Planificación y bodega</h3>
+        <p>Reserva la materia prima en SAP y prepara los despachos: pallets, cajas y camiones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Mi rol -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">03</span>Mi rol</h2>
+    <div class="cs-grid cs-1-2">
+      <div class="card card-oscuro cs-pad">
+        <span class="kicker celeste">Diseñadora UX/UI</span>
+        <p class="frase">Lideré el proyecto de punta a punta: de la investigación al hand off.</p>
+        <span class="cs-nota">Trabajé junto a desarrollo.</span>
+      </div>
+      <ul class="card cs-pad cs-lista">
+        <li><strong>Planifiqué y conduje la investigación:</strong> 4 entrevistas con distintas áreas y el test del prototipo.</li>
+        <li><strong>Reconstruí el flujo real del pedido</strong> en 9 etapas, con los canales que usa cada una.</li>
+        <li><strong>Diseñé el flujo de cotización</strong> en 4 iteraciones, además de los flujos de costeo, producción y descarga de PDF.</li>
+        <li><strong>Creé el design system</strong> y documenté el hand off para desarrollo.</li>
+      </ul>
+    </div>
+    <ol class="cs-grid cs-6 cs-pasos">
+      {% for p in [
+        ["Benchmark", "Sistemas de gestión y cotización"],
+        ["Diagrama de flujo", "Del proceso actual y del ideal"],
+        ["Borrador", "Primeras pantallas en baja fidelidad"],
+        ["4 iteraciones", "[Qué cambió de la primera a la cuarta]"],
+        ["Design system", "Tokens, íconos y componentes"],
+        ["Hand off", "Documentado en 8 partes"]
+      ] %}
+      <li class="card cs-paso">
+        <span class="cs-mini rojo">Paso {{ loop.index }}</span>
+        <span class="cs-paso-nombre">{{ p[0] }}</span>
+        <span class="cs-paso-detalle">{{ p[1] }}</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <!-- 04 La investigación -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">04</span>La investigación</h2>
+    <p class="cs-lead">Hablé con 4 personas de distintas áreas para entender el pedido completo, no solo la pantalla de cotización.</p>
+    <div class="chips">
+      {% for m in ["Entrevistas en profundidad", "Mapeo del flujo real", "Benchmark", "Test de prototipo"] %}<span class="chip-suave">{{ m }}</span>{% endfor %}
+    </div>
+    <div class="cs-grid cs-4">
+      {% for e in [
+        ["29 min", "Contraparte del proyecto", "Kickoff: usuarios, prioridades y método"],
+        ["43 min", "Mejora continua", "El flujo completo, de la solicitud a la factura"],
+        ["57 min", "Desarrollo y producción", "12 años en la empresa · entrevista en profundidad"],
+        ["33 min", "Área comercial", "Entrevista y test del prototipo"]
+      ] %}
+      <div class="card cs-entrevista">
+        <span class="cs-dato">{{ e[0] }}</span>
+        <span class="cs-entrevista-area">{{ e[1] }}</span>
+        <span class="cs-paso-detalle">{{ e[2] }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="card card-rojo cs-nota-test">
+      <span class="cs-nota-num">8/10</span>
+      <div>
+        <h3>Test de prototipo con el área comercial</h3>
+        <p>Cotizó para un cliente recurrente y le puso nota 8 de 10 a la facilidad del flujo. Lo que más le costó entender fue el campo “tipo de cotización”.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Los hallazgos -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">05</span>Los hallazgos</h2>
+    <div class="cs-grid cs-3">
+      <div class="card cs-pad cs-hallazgo">
+        <span class="cs-hallazgo-num">1</span>
+        <h3>Nadie cotiza desde cero</h3>
+        <p>Comercial replica una cotización anterior, pero la réplica no copiaba barniz, foil, relieve ni cuño. Había que imprimir la antigua y cruzar los datos a mano.</p>
+      </div>
+      <div class="card card-turquesa cs-pad cs-hallazgo">
+        <span class="cs-hallazgo-num">2</span>
+        <h3>Comercial no debería cargar con el detalle técnico</h3>
+        <blockquote>“No necesito que el comercial me diga cuál es el código del barniz.”<cite>— Desarrollo y producción</cite></blockquote>
+      </div>
+      <div class="card cs-pad cs-hallazgo">
+        <span class="cs-hallazgo-num">3</span>
+        <h3>Nadie sabe en qué estado va un pedido sin preguntar</h3>
+        <p>Comercial sigue sus pedidos en un Excel paralelo y llama a bodega para saber cómo van. Producción pidió un seguimiento “como el típico tracking de un despacho”.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 La solución -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">06</span>La solución</h2>
+    <p class="cs-lead">Un módulo comercial que guía la cotización paso a paso y muestra solo lo necesario en cada momento.</p>
+    <div class="cs-grid cs-3">
+      {% for s in [
+        [img.paso1, "1 · Seleccionar cliente", "Búsqueda por nombre y ficha del cliente para revisar que sus datos estén al día."],
+        [img.paso2, "2 · Detalle de producto", "Características agrupadas en bloques, con listas desplegables en vez de texto libre."],
+        [img.paso3, "3 · Resumen", "Toda la cotización en una vista, editable, antes de enviarla a costeo."]
+      ] %}
+      <figure class="card cs-pantalla">
+        {{ imagen(s[0], "Pantalla: " + s[1], "cs-img-pantalla") }}
+        <figcaption>
+          <h3>{{ s[1] }}</h3>
+          <p>{{ s[2] }}</p>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    <div class="card cs-pad">
+      <table class="cs-tabla">
+        <thead><tr><th scope="col">Antes</th><th scope="col">Qué cambió</th></tr></thead>
+        <tbody>
+          {% for f in [
+            ["Toda la información en una sola pantalla", "Flujo guiado en 3 pasos, con un stepper que muestra dónde va la persona"],
+            ["Nadie cotiza desde cero", "Buscar y replicar una cotización anterior como acción principal, copiando todos los campos técnicos"],
+            ["Clientes difíciles de encontrar por código", "Búsqueda predictiva por nombre del cliente"],
+            ["Cada persona escribe distinto", "Listas desplegables para tipo de trabajo, barniz, foil, pegado y formato de entrega, con opción “otro”"],
+            ["Detalle técnico que no le corresponde a comercial", "Opciones a nivel de familia; el detalle fino lo completa Desarrollo"],
+            ["Errores que llegaban hasta la máquina", "Resumen completo para revisar antes de enviar a costeo"]
+          ] %}
+          <tr><th scope="row">{{ f[0] }}</th><td>{{ f[1] }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 07 Material visual -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2"><span class="cs-num">07</span>Material visual</h2>
+    <p class="cs-lead">El proceso completo, del flujo al hand off.</p>
+    <div class="cs-grid cs-2-1">
+      <figure class="card cs-material">{{ imagen(img.flujo, "Flujo real del pedido") }}<figcaption>Flujo real del pedido</figcaption></figure>
+      <figure class="card cs-material">{{ imagen(img.borrador, "Borrador") }}<figcaption>Borrador</figcaption></figure>
+    </div>
+    <div class="cs-grid cs-1-2">
+      <figure class="card card-turquesa cs-material">{{ imagen(img.designSystem, "Design system") }}<figcaption>Design system</figcaption></figure>
+      <figure class="card cs-material">{{ imagen(img.handoff, "Hand off para desarrollo") }}<figcaption>Hand off para desarrollo</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Resultados y aprendizajes -->
+  <section class="cs-bloque">
+    <h2 class="cs-h2">Resultados y aprendizajes</h2>
+    <div class="cs-grid cs-1-2">
+      <div class="card card-turquesa cs-pad">
+        <span class="kicker celeste">Qué pasó después</span>
+        <p class="cs-texto-claro">El MVP de SIA se implementó a los 5 meses del trabajo, con la promesa de hacer mejora continua.</p>
+      </div>
+      <div class="card cs-pad cs-aprendizajes">
+        <div><h3>Investigar el proceso, no solo la pantalla</h3><p>El problema de la cotización se entendió recién al seguir el pedido hasta producción y despacho.</p></div>
+        <div><h3>Las áreas pueden querer cosas opuestas</h3><p>Comercial pedía más opciones y producción, menos. Diseñar fue decidir quién completa cada dato.</p></div>
+        <div><h3>Todo es urgente</h3><p>Quien responde primero con precio suele ganar el negocio: lo que importa es acortar el camino.</p></div>
+      </div>
+    </div>
+    <div class="card card-oscuro cs-pad">
+      <span class="kicker celeste">Próximas etapas</span>
+      <div class="chips">
+        {% for e in ["Vista única de pedidos con estado", "Stock de SAP al crear la orden", "Validación de artes en el sistema", "Ficha con la receta de cada producto", "Cálculo de pallets y camiones"] %}<span class="chip-borde">{{ e }}</span>{% endfor %}
+      </div>
+    </div>
+  </section>
+
+</div>

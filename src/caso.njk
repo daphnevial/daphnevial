@@ -8,13 +8,27 @@ permalink: "/casos/{{ caso.slug }}/"
 eleventyComputed:
   title: "{{ caso.nombre }}"
 ---
-{% include "secciones/nav.njk" %}
-{% include "secciones/caso.njk" %}
-{% set anterior = pagination.page.previous %}
-{% set siguiente = pagination.page.next %}
-<nav class="otros-casos" aria-label="Otros casos">
-  {% if anterior %}<a class="pill" href="/casos/{{ anterior.slug }}/">← {{ anterior.nombre }}</a>{% else %}<span></span>{% endif %}
-  {% if siguiente %}<a class="pill" href="/casos/{{ siguiente.slug }}/">{{ siguiente.nombre }} →</a>{% endif %}
+{% set siguiente = casos[(pagination.pageNumber + 1) % (casos | length)] %}
+<nav class="nav" aria-label="Principal">
+  <a class="logo" href="/">Daphne Vial<span class="rojo">.</span></a>
+  <a class="pill" href="/#proyectos">← Volver a proyectos</a>
 </nav>
-{% include "secciones/contacto.njk" %}
+
+{% if caso.plantilla == "sia" %}
+  {% include "casos/sia.njk" %}
+{% else %}
+  {% include "secciones/caso.njk" %}
+{% endif %}
+
+<nav class="cs-siguiente bento" aria-label="Más casos">
+  <a class="card" href="/#proyectos">
+    <span class="cs-mini">Volver</span>
+    <span class="cs-siguiente-titulo">← Todos los proyectos</span>
+  </a>
+  <a class="card card-turquesa" href="/casos/{{ siguiente.slug }}/">
+    <span class="cs-mini">Siguiente caso</span>
+    <span class="cs-siguiente-titulo">{{ siguiente.nombre }} →</span>
+  </a>
+</nav>
+
 {% include "secciones/pie.njk" %}
