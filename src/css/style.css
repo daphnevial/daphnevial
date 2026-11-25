@@ -1,28 +1,32 @@
-/* Portafolio Daphne Vial — Versión A · Bento claro */
+/* Portafolio Daphne Vial — Bento · Verde bosque y mostaza */
 :root {
-  --fondo: #F2F6F7;
-  --tinta: #13232A;
-  --texto-suave: #3B4D54;
+  /* Paleta base */
+  --fondo: #F5EFE3;          /* crema */
+  --tinta: #1A2420;          /* casi negro */
+  --texto-suave: #4A5650;
   --blanco: #FFFFFF;
-  --rojo: #DF2627;
-  --rojo-claro: #E85A5B;
-  --rojo-oscuro: #B71C1D;
-  --turquesa: #2BA3B4;
-  --turquesa-claro: #5FBCC9;
-  --turquesa-palido: #E3F3F5;
-  --turquesa-texto: #13535C;
-  --turquesa-label: #1A6F7B;
-  --turquesa-profundo: #0E3439;
-  --celeste: #9FD6DE;
-  --sobre-oscuro: #DCE7EA;
-  --borde-oscuro: #3E5961;
+  /* Acento cálido: mostaza (antes rojo) */
+  --rojo: #E8B04B;
+  --rojo-claro: #F1CB80;
+  --rojo-oscuro: #8F6414;    /* mostaza oscura, legible sobre claro */
+  --sobre-mostaza: #1A2420;
+  /* Acento principal: verde bosque (antes turquesa) */
+  --turquesa: #1F4D3A;
+  --turquesa-claro: #3A6B55;
+  --turquesa-palido: #E6ECE3;
+  --turquesa-texto: #1F4D3A;
+  --turquesa-label: #1F4D3A;
+  --turquesa-profundo: #E8B04B;  /* etiquetas sobre verde */
+  --celeste: #E8B04B;            /* etiquetas sobre oscuro */
+  --sobre-oscuro: #D9DED6;
+  --borde-oscuro: #3E4C45;
   --radio: 28px;
 }
 
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--fondo); }
 a { color: var(--turquesa-label); }
-a:hover { color: var(--rojo); }
+a:hover { color: var(--rojo-oscuro); }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .page {
@@ -35,7 +39,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .wrap { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 72px; }
 
 /* Utilidades de color */
-.rojo { color: var(--rojo); }
+.rojo { color: var(--rojo-oscuro); }
+.logo .rojo { color: var(--rojo); }
+.resaltado { background: var(--rojo); color: var(--turquesa); padding: 0 .12em; border-radius: 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .rojo-oscuro { color: var(--rojo-oscuro); }
 .teal { color: var(--turquesa-label); }
 .profundo { color: var(--turquesa-profundo); }
@@ -47,9 +53,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .logo { font-weight: 900; font-size: 20px; color: var(--tinta); text-decoration: none; letter-spacing: -0.02em; }
 .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
 .pill { padding: 12px 18px; border-radius: 999px; background: var(--blanco); color: var(--tinta); text-decoration: none; font-weight: 500; font-size: 15px; }
-.pill-rojo { background: var(--rojo); color: var(--blanco); }
-.pill:hover { color: var(--rojo); }
-.pill-rojo:hover { color: var(--blanco); background: var(--rojo-oscuro); }
+.pill-rojo { background: var(--rojo); color: var(--sobre-mostaza); }
+.pill:hover { color: var(--rojo-oscuro); }
+.pill-rojo:hover { color: var(--blanco); background: var(--turquesa); }
 
 /* Grilla bento */
 .bento { display: grid; gap: 16px; }
@@ -70,7 +76,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   text-decoration: none;
   color: var(--tinta);
 }
-.card-rojo { background: var(--rojo); color: var(--blanco); }
+.card-rojo { background: var(--rojo); color: var(--sobre-mostaza); }
 .card-oscuro { background: var(--tinta); color: var(--blanco); }
 .card-turquesa { background: var(--turquesa); color: var(--blanco); }
 .card-blanco { background: var(--blanco); color: var(--tinta); }
@@ -114,7 +120,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .imagen { border-radius: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-weight: 500; }
 .imagen-grande { flex-grow: 1; border-radius: 20px; background: var(--turquesa-claro); color: var(--blanco); font-size: 20px; font-weight: 700; min-height: 200px; }
 .imagen-chica { height: 120px; background: var(--turquesa-palido); color: var(--turquesa-texto); }
-.card-rojo .imagen-chica { background: var(--rojo-claro); color: var(--blanco); }
+.card-rojo .imagen-chica { background: var(--rojo-claro); color: var(--sobre-mostaza); }
 .proyecto-principal { justify-content: space-between; gap: 24px; min-height: 420px; }
 .proyecto { justify-content: space-between; gap: 16px; }
 .proyecto-nombre-grande { font-size: 32px; font-weight: 900; }
@@ -140,7 +146,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .contacto-intro p { margin: 0; font-size: 18px; color: var(--sobre-oscuro); }
 .contacto-links { display: flex; flex-direction: column; gap: 16px; }
 .contacto-link { flex-grow: 1; padding: 28px; font-size: 20px; font-weight: 700; flex-direction: row; align-items: center; }
-.contacto-link.card-rojo { color: var(--blanco); }
+.contacto-link.card-rojo { color: var(--sobre-mostaza); }
 .contacto-link:hover { transform: translateY(-2px); }
 
 /* Móvil */
