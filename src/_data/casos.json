@@ -1,7 +1,7 @@
 [
   {
     "slug": "home-app",
-    "nombre": "Home APP",
+    "nombre": "Proyecto en construcción",
     "etiqueta": "[Empresa · Año]",
     "imagen": "",
     "color": "turquesa",
@@ -35,7 +35,8 @@
     ],
     "solucionImagen": "",
     "resultado": "[+X%]",
-    "resultadoDetalle": "[Qué mejoró.]"
+    "resultadoDetalle": "[Qué mejoró.]",
+    "enConstruccion": true
   },
   {
     "slug": "proyecto-sia",
@@ -78,7 +79,7 @@
   },
   {
     "slug": "proyecto-3",
-    "nombre": "[Nombre del proyecto 3]",
+    "nombre": "Proyecto en construcción",
     "etiqueta": "[Empresa · Año]",
     "imagen": "",
     "color": "rojo",
@@ -112,6 +113,7 @@
     ],
     "solucionImagen": "",
     "resultado": "[+X%]",
-    "resultadoDetalle": "[Qué mejoró.]"
+    "resultadoDetalle": "[Qué mejoró.]",
+    "enConstruccion": true
   }
 ]

@@ -18,7 +18,7 @@
     <nav class="pie-mapa" aria-label="Casos de estudio">
       <h2>Casos de estudio</h2>
       <ul>
-        {% for c in casos %}<li><a href="/casos/{{ c.slug }}/">{{ c.nombre }}</a></li>{% endfor %}
+        {% for c in casosPublicados %}<li><a href="/casos/{{ c.slug }}/">{{ c.nombre }}</a></li>{% endfor %}
       </ul>
     </nav>
   </div>

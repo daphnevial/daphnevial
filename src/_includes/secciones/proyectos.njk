@@ -1,3 +1,12 @@
+{%- macro contenido(p, grande) -%}
+  {% if grande and p.etiqueta and not p.enConstruccion %}<span class="badge badge-blanco">{{ p.etiqueta }}</span>{% endif %}
+  <div class="imagen {{ 'imagen-grande' if grande else 'imagen-chica' }}">
+    {%- if p.imagen %}<img src="{{ p.imagen }}" alt="{{ p.nombre }}">
+    {%- elif p.enConstruccion %}En construcción
+    {%- else %}[Imagen]{% endif -%}
+  </div>
+  <span class="{{ 'proyecto-nombre-grande' if grande else 'proyecto-nombre' }}">{{ p.nombre }}{% if not p.enConstruccion %} →{% endif %}</span>
+{%- endmacro -%}
 <section id="proyectos" class="seccion">
   <div class="seccion-cabecera">
     <h2 class="titulo">Proyectos</h2>
@@ -5,18 +14,11 @@
   </div>
   <div class="bento cols-3">
     {% for p in casos %}
-      {% set url = "/casos/" + p.slug + "/" %}
-      {% if loop.first %}
-      <a href="{{ url }}" class="card proyecto-principal card-{{ p.color }} span-2 row-2">
-        <span class="badge badge-blanco">{{ p.etiqueta }}</span>
-        <div class="imagen imagen-grande">{% if p.imagen %}<img src="{{ p.imagen }}" alt="{{ p.nombre }}">{% else %}[Imagen del proyecto]{% endif %}</div>
-        <span class="proyecto-nombre-grande">{{ p.nombre }} →</span>
-      </a>
+      {% set clase = "card card-" + p.color + (" proyecto-principal span-2 row-2" if loop.first else " proyecto") + (" en-construccion" if p.enConstruccion else "") %}
+      {% if p.enConstruccion %}
+      <div class="{{ clase }}">{{ contenido(p, loop.first) }}</div>
       {% else %}
-      <a href="{{ url }}" class="card proyecto card-{{ p.color }}">
-        <div class="imagen imagen-chica">{% if p.imagen %}<img src="{{ p.imagen }}" alt="{{ p.nombre }}">{% else %}[Imagen]{% endif %}</div>
-        <span class="proyecto-nombre">{{ p.nombre }} →</span>
-      </a>
+      <a href="/casos/{{ p.slug }}/" class="{{ clase }}">{{ contenido(p, loop.first) }}</a>
       {% endif %}
     {% endfor %}
   </div>

@@ -1,14 +1,14 @@
 ---
 layout: base.njk
 pagination:
-  data: casos
+  data: casosPublicados
   size: 1
   alias: caso
 permalink: "/casos/{{ caso.slug }}/"
 eleventyComputed:
   title: "{{ caso.nombre }}"
 ---
-{% set siguiente = casos[(pagination.pageNumber + 1) % (casos | length)] %}
+{% set siguiente = casosPublicados[(pagination.pageNumber + 1) % (casosPublicados | length)] %}
 <nav class="nav" aria-label="Principal">
   <a class="logo" href="/">Daphne Vial<span class="rojo">.</span></a>
   <a class="pill" href="/#proyectos">← Volver a proyectos</a>
@@ -25,10 +25,12 @@ eleventyComputed:
     <span class="cs-mini">Volver</span>
     <span class="cs-siguiente-titulo">← Todos los proyectos</span>
   </a>
+  {% if siguiente.slug != caso.slug %}
   <a class="card card-turquesa" href="/casos/{{ siguiente.slug }}/">
     <span class="cs-mini">Siguiente caso</span>
     <span class="cs-siguiente-titulo">{{ siguiente.nombre }} →</span>
   </a>
+  {% endif %}
 </nav>
 
 {% include "secciones/pie.njk" %}
