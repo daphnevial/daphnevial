@@ -5,8 +5,19 @@
   "rol": "Diseñadora UX/UI · Santiago, Chile",
   "email": "[tu-email]",
   "linkedin": "https://www.linkedin.com/in/daphne-vial-825571197/",
+  "behance": "https://www.behance.net/daphnevial",
   "cv": "#",
   "aniosUX": "8 años",
-  "ultimaExperiencia": { "empresa": "Caja Los Andes", "periodo": "2023 — 2026" },
-  "loQueHago": ["Investigación UX", "Arquitectura de información", "Diseño de interfaces", "Prototipado", "Motion", "Marketing"]
+  "ultimaExperiencia": {
+    "empresa": "Caja Los Andes",
+    "periodo": "2023 — 2026"
+  },
+  "loQueHago": [
+    "Investigación UX",
+    "Arquitectura de información",
+    "Diseño de interfaces",
+    "Prototipado",
+    "Motion",
+    "Marketing"
+  ]
 }
