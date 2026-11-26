@@ -1,5 +1,21 @@
 [
-  { "periodo": "2023 — 2026", "cargo": "Diseñadora UX/UI", "empresa": "Caja Los Andes", "detalle": "[Logros principales y productos en los que trabajaste.]", "destacada": true },
-  { "periodo": "[Años]", "cargo": "Diseño gráfico y motion", "empresa": "[Empresa]", "detalle": "[Qué hacías y qué aprendiste.]" },
-  { "periodo": "[Años]", "cargo": "Marketing", "empresa": "[Empresa]", "detalle": "[Qué hacías y qué aprendiste.]" }
+  {
+    "periodo": "2023 — 2026",
+    "cargo": "Diseñadora UX/UI",
+    "empresa": "Caja Los Andes",
+    "detalle": "Rediseño del home y la navegación de la app, y creación desde cero del flujo digital de afiliación de empresas. Research con usuarios, talleres con stakeholders y Design System federado.",
+    "destacada": true
+  },
+  {
+    "periodo": "2019 — 2023",
+    "cargo": "UX y growth marketing",
+    "empresa": "ComunidadFeliz · Apptec · Independiente",
+    "detalle": "Landings y experimentos A/B para optimizar la conversión, Design System para marketing y proyectos freelance de UX, como el rediseño del backoffice SIA. Aquí di el salto a UX."
+  },
+  {
+    "periodo": "2013 — 2019",
+    "cargo": "Diseño gráfico y motion",
+    "empresa": "Cactus Consultora · Brecha Digital",
+    "detalle": "Diseño gráfico, motion graphics, producción audiovisual y sitios web para campañas. De aquí viene mi ojo visual y mi forma de contar historias."
+  }
 ]
