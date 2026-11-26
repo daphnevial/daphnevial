@@ -1,5 +1,5 @@
 {%- macro contenido(p, grande) -%}
-  {% if grande and p.etiqueta and not p.enConstruccion %}<span class="badge badge-blanco">{{ p.etiqueta }}</span>{% endif %}
+  {% if grande and p.etiqueta and not p.enConstruccion %}<span class="badge-texto">{{ p.etiqueta }}</span>{% endif %}
   <div class="imagen {{ 'imagen-grande' if grande else 'imagen-chica' }}">
     {%- if p.imagen %}<img src="{{ p.imagen }}" alt="{{ p.nombre }}">
     {%- elif p.enConstruccion %}En construcción

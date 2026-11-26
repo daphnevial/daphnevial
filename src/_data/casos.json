@@ -1,9 +1,9 @@
 [
   {
-    "slug": "home-app",
-    "nombre": "Proyecto en construcción",
-    "etiqueta": "[Empresa · Año]",
-    "imagen": "",
+    "slug": "proyecto-sia",
+    "nombre": "Proyecto SIA",
+    "etiqueta": "2025 · Herramienta interna B2B",
+    "imagen": "/img/sia/portada.png",
     "color": "turquesa",
     "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
     "objetivo": "[Qué buscaba lograr el proyecto, idealmente medible.]",
@@ -36,13 +36,13 @@
     "solucionImagen": "",
     "resultado": "[+X%]",
     "resultadoDetalle": "[Qué mejoró.]",
-    "enConstruccion": true
+    "plantilla": "sia"
   },
   {
-    "slug": "proyecto-sia",
-    "nombre": "Proyecto SIA",
-    "etiqueta": "2025 · Herramienta interna B2B",
-    "imagen": "/img/sia/portada.png",
+    "slug": "home-app",
+    "nombre": "Proyecto en construcción",
+    "etiqueta": "[Empresa · Año]",
+    "imagen": "",
     "color": "blanco",
     "contexto": "[¿Qué estaba pasando? ¿A quién afectaba y cómo lo sabías?]",
     "objetivo": "[Qué buscaba lograr el proyecto, idealmente medible.]",
@@ -75,7 +75,7 @@
     "solucionImagen": "",
     "resultado": "[+X%]",
     "resultadoDetalle": "[Qué mejoró.]",
-    "plantilla": "sia"
+    "enConstruccion": true
   },
   {
     "slug": "proyecto-3",
