@@ -127,20 +127,17 @@
   <section class="cs-bloque">
     <h2 class="cs-h2"><span class="cs-num">04</span>La investigación</h2>
     <p class="cs-lead">Hablé con 4 personas de distintas áreas para entender el pedido completo, no solo la pantalla de cotización.</p>
-    <div class="chips">
-      {% for m in ["Entrevistas en profundidad", "Mapeo del flujo real", "Benchmark", "Test de prototipo"] %}<span class="chip-suave">{{ m }}</span>{% endfor %}
-    </div>
+    <p class="cs-metodos">Entrevistas en profundidad · Mapeo del flujo real · Benchmark · Test de prototipo</p>
     <div class="cs-grid cs-4">
       {% for e in [
-        ["29 min", "Contraparte del proyecto", "Kickoff: usuarios, prioridades y método"],
-        ["43 min", "Mejora continua", "El flujo completo, de la solicitud a la factura"],
-        ["57 min", "Desarrollo y producción", "12 años en la empresa · entrevista en profundidad"],
-        ["33 min", "Área comercial", "Entrevista y test del prototipo"]
+        ["Contraparte del proyecto", "Kickoff: usuarios, prioridades y método"],
+        ["Mejora continua", "El flujo completo, de la solicitud a la factura"],
+        ["Desarrollo y producción", "12 años en la empresa · entrevista en profundidad"],
+        ["Área comercial", "Entrevista y test del prototipo"]
       ] %}
       <div class="card cs-entrevista">
-        <span class="cs-dato">{{ e[0] }}</span>
-        <span class="cs-entrevista-area">{{ e[1] }}</span>
-        <span class="cs-paso-detalle">{{ e[2] }}</span>
+        <span class="cs-entrevista-area">{{ e[0] }}</span>
+        <span class="cs-paso-detalle">{{ e[1] }}</span>
       </div>
       {% endfor %}
     </div>
